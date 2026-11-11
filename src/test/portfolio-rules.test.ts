@@ -15,7 +15,7 @@ describe("terminal commands", () => {
 
   it("unknown commands report not found", () => {
     const out = runCommand("rm -rf") as { kind: string }[];
-    expect(out[0].kind).toBe("error");
+    expect(out[0]?.kind).toBe("error");
   });
 
   it("clear clears the screen", () => {

@@ -47,7 +47,7 @@ export function Terminal() {
       e.preventDefault();
       const next = cursor === null ? history.length - 1 : Math.max(0, cursor - 1);
       setCursor(next);
-      setValue(history[next]);
+      setValue(history[next] ?? "");
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
       if (cursor === null) return;
@@ -57,7 +57,7 @@ export function Terminal() {
         setValue("");
       } else {
         setCursor(next);
-        setValue(history[next]);
+        setValue(history[next] ?? "");
       }
     }
   };

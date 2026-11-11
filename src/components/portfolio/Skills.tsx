@@ -16,11 +16,9 @@ export function Skills() {
           label="Skills"
           title="What I Work With."
           align="split"
+          titleId="skills-heading"
           subtitle="Honest levels, no percentages. The first two groups are what I'm learning now — the last is where I'm heading next."
         />
-        <span id="skills-heading" className="sr-only">
-          Technical skills
-        </span>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-10">
           {current.map((group, gi) => (

@@ -14,10 +14,7 @@ export function About() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-7">
-            <SectionHeader index="01" label="About" title={about.heading} subtitle={about.subtitle} />
-            <span id="about-title" className="sr-only">
-              About Odil
-            </span>
+            <SectionHeader index="01" label="About" title={about.heading} subtitle={about.subtitle} titleId="about-title" />
 
             <Reveal delay={120} className="mt-12 max-w-2xl space-y-6">
               <p className="font-display text-[1.45rem] leading-snug text-foreground sm:text-[1.7rem]">{lead}</p>

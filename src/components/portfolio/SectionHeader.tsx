@@ -10,10 +10,12 @@ interface SectionHeaderProps {
   tone?: "light" | "dark";
   className?: string;
   align?: "left" | "split";
+  /** id for the h2, used by the section's aria-labelledby */
+  titleId?: string;
 }
 
 /** Editorial section heading: "01 — About" eyebrow, serif title, optional subtitle. */
-export function SectionHeader({ index, label, title, subtitle, tone = "light", className, align = "left" }: SectionHeaderProps) {
+export function SectionHeader({ index, label, title, subtitle, tone = "light", className, align = "left", titleId }: SectionHeaderProps) {
   const dark = tone === "dark";
   return (
     <Reveal
@@ -29,6 +31,7 @@ export function SectionHeader({ index, label, title, subtitle, tone = "light", c
           <span className={dark ? "text-primary-foreground/70" : "text-muted-foreground"}>{label}</span>
         </p>
         <h2
+          id={titleId}
           className={cn(
             "font-display mt-5 text-[2.6rem] leading-[1.02] sm:text-5xl lg:text-6xl text-balance-pretty",
             dark ? "text-primary-foreground" : "text-primary",

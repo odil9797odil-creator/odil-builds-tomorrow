@@ -24,7 +24,7 @@ export function Hero() {
       {/* Background geometry */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute right-0 top-0 hidden h-full w-[38%] bg-secondary/60 lg:block" />
-        <div className="absolute left-[6%] top-[18%] hidden size-40 rounded-full border border-gold/30 lg:block" />
+        <div className="absolute bottom-[10%] left-[44%] hidden size-56 rounded-full border border-gold/25 lg:block" />
       </div>
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-5 pb-24 pt-12 sm:px-8 lg:min-h-[calc(100svh-4.5rem)] lg:grid-cols-12 lg:gap-10 lg:pb-20 lg:pt-8">
@@ -93,7 +93,9 @@ export function Hero() {
             </p>
 
             <Reveal variant="image" className="relative aspect-[4/5] overflow-hidden rounded-sm">
-              <Portrait />
+              <div className="size-full">
+                <Portrait />
+              </div>
             </Reveal>
 
             {/* corner ticks */}

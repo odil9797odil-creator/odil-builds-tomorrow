@@ -224,15 +224,20 @@
   }
 }
 
+/* Observed wrapper; the clip animates on its child (a clipped element never "intersects"). */
 @utility image-reveal {
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 1.3s var(--ease-out-soft) 0.15s;
-  &.is-visible {
+  & > * {
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path 1.3s var(--ease-out-soft) 0.15s;
+  }
+  &.is-visible > * {
     clip-path: inset(0 0 0 0);
   }
   @media (prefers-reduced-motion: reduce) {
-    clip-path: none;
-    transition: none;
+    & > * {
+      clip-path: none;
+      transition: none;
+    }
   }
 }
 

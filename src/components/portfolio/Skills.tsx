@@ -77,28 +77,29 @@ function SkillCard({ skill, future }: { skill: Skill; future?: boolean }) {
           : "border border-border bg-card shadow-soft",
       )}
     >
-      <div className="flex items-start justify-between gap-3">
-        <span
-          className={cn(
-            "grid size-11 place-items-center rounded-md transition-colors duration-500",
-            future
-              ? "border border-gold/40 text-gold"
-              : "bg-primary text-primary-foreground group-hover:bg-primary-deep",
-          )}
-        >
-          <Glyph name={skill.icon} />
-        </span>
-        <span
-          className={cn(
-            "rounded-full px-2.5 py-1 text-[0.64rem] font-semibold",
-            future ? "text-gold" : "bg-secondary text-primary",
-          )}
-        >
-          {skill.level}
-        </span>
-      </div>
+      <span
+        className={cn(
+          "grid size-11 place-items-center rounded-md transition-colors duration-500",
+          future
+            ? "border border-gold/40 text-gold"
+            : "bg-primary text-primary-foreground group-hover:bg-primary-deep",
+        )}
+      >
+        <Glyph name={skill.icon} />
+      </span>
       <h4 className={cn("mt-6 text-lg font-semibold", future ? "text-foreground/80" : "text-foreground")}>{skill.name}</h4>
       <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{skill.description}</p>
+      <p className="mt-auto pt-5">
+        <span
+          className={cn(
+            "inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 text-[0.66rem] font-semibold",
+            future ? "border border-dashed border-gold/60 text-gold" : "bg-secondary text-primary",
+          )}
+        >
+          <span className={cn("size-1.5 rounded-full", future ? "border border-gold" : "bg-gold")} aria-hidden />
+          {skill.level}
+        </span>
+      </p>
     </li>
   );
 }

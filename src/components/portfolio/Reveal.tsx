@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface RevealProps {
   children: ReactNode;
-  className?: string;
+  className?: string | undefined;
   delay?: number;
   as?: ElementType;
   variant?: "fade" | "image";

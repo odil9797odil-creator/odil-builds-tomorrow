@@ -229,7 +229,7 @@ function inputClass(error?: string) {
   );
 }
 
-function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: ReactNode }) {
+function Field({ id, label, error, children }: { id: string; label: string; error?: string | undefined; children: ReactNode }) {
   return (
     <div>
       <label htmlFor={id} className="eyebrow mb-2 block text-[0.62rem] text-muted-foreground">

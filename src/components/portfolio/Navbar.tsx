@@ -5,18 +5,18 @@ import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
 
 function useActiveSection(ids: readonly string[]) {
-  const [active, setActive] = useState<string>(ids[0]);
+  const [active, setActive] = useState<string>(ids[0] ?? "");
   useEffect(() => {
     const onScroll = () => {
       const marker = window.innerHeight * 0.35;
-      let current = ids[0];
+      let current = ids[0] ?? "";
       for (const id of ids) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top - marker <= 0) current = id;
       }
       // At the very bottom, highlight the last section.
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
-        current = ids[ids.length - 1];
+        current = ids[ids.length - 1] ?? current;
       }
       setActive(current);
     };

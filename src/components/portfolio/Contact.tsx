@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { AlertCircle, ArrowRight, CheckCircle2, Github, Linkedin, Mail, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { contact, contactForm } from "@/content/portfolio";
@@ -229,7 +229,7 @@ function inputClass(error?: string) {
   );
 }
 
-function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: React.ReactNode }) {
+function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: ReactNode }) {
   return (
     <div>
       <label htmlFor={id} className="eyebrow mb-2 block text-[0.62rem] text-muted-foreground">

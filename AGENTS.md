@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All editable portfolio content (text, links, skills, projects, journey, portrait) lives in `src/content/portfolio.ts`; components only render it. Why: the owner updates content without touching layout.
+- The site is one scrolling page at `/` with in-page anchors per section, by explicit owner request (smooth scroll + active nav highlight).
+- Missing links/portrait/contact delivery render an explicit "coming soon" / "setup required" state, never a fake link or fake success. Why: the owner forbids fake functionality.
+- Terminal command logic lives in `src/lib/terminal.ts` and contact validation in `src/lib/contact.ts`, both covered by `src/test/portfolio-rules.test.ts`.

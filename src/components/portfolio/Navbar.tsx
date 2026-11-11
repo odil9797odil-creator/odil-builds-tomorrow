@@ -68,7 +68,9 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
-        scrolled || open
+        open
+          ? "border-b border-border/80 bg-background"
+          : scrolled
           ? "border-b border-border/80 bg-background/85 backdrop-blur-md"
           : "border-b border-transparent bg-transparent",
       )}

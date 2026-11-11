@@ -87,7 +87,7 @@ export function Hero() {
 
           <div className="relative rounded-md border border-border bg-card p-3 shadow-frame sm:p-3.5">
             {/* badge */}
-            <p className="eyebrow absolute -top-3 right-6 z-10 rounded-sm bg-primary px-3 py-1.5 text-[0.6rem] text-primary-foreground shadow-soft">
+            <p className="eyebrow absolute -top-3 right-6 z-10 rounded-sm bg-primary px-3 py-1.5 text-[0.64rem] text-primary-foreground shadow-soft">
               <span className="mr-1.5 text-gold-soft">●</span>
               {profile.heroBadge}
             </p>

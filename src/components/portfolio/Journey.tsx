@@ -65,7 +65,7 @@ export function Journey() {
                     <span className={cn("font-mono text-xs", isCurrent ? "text-gold-soft" : "text-gold")}>Step {step.number}</span>
                     <span
                       className={cn(
-                        "eyebrow rounded-full px-2 py-0.5 text-[0.56rem]",
+                        "eyebrow rounded-full px-2 py-0.5 text-[0.62rem]",
                         isCurrent ? "bg-gold text-primary-deep" : "border border-border text-muted-foreground",
                       )}
                     >

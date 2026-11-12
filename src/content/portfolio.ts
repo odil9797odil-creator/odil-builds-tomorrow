@@ -5,13 +5,6 @@
  *  Text, links, skills, projects and journey steps all live here.
  * ───────────────────────────────────────────────────────────────
  *
- *  HOW TO ADD YOUR PORTRAIT
- *  1. Put your photo in  src/assets/  (e.g. src/assets/odil.jpg)
- *  2. At the top of this file add:  import portraitImg from "@/assets/odil.jpg";
- *  3. Set  profile.portrait.src = portraitImg
- *
- *  Leave any link as `null` until it exists — the site shows a
- *  tasteful "coming soon" state instead of a broken link.
  */
 
 import portraitImg from "@/assets/Image.portrait_for_web.png";
@@ -32,7 +25,6 @@ export const profile = {
   introduction:
     "Hi, I'm Odil — a programming student with a growing interest in software development, problem-solving, and technology. I'm currently developing my skills in Python and C++, while exploring web technologies and working toward becoming a backend developer. In the future, I hope to explore the fascinating world of Machine Learning and Artificial Intelligence.",
   portrait: {
-    /** Set to an imported image (see instructions above). `null` shows the placeholder. */
     src: portraitImg,
     alt: "Portrait of Odil",
   },

@@ -14,6 +14,8 @@
  *  tasteful "coming soon" state instead of a broken link.
  */
 
+import portraitImg from "@/assets/Image.portrait_for_web.png";
+
 export type Level = "Currently learning" | "Basic knowledge" | "Beginner" | "Planned";
 
 export const profile = {
@@ -31,7 +33,7 @@ export const profile = {
     "Hi, I'm Odil — a programming student with a growing interest in software development, problem-solving, and technology. I'm currently developing my skills in Python and C++, while exploring web technologies and working toward becoming a backend developer. In the future, I hope to explore the fascinating world of Machine Learning and Artificial Intelligence.",
   portrait: {
     /** Set to an imported image (see instructions above). `null` shows the placeholder. */
-    src: null as string | null,
+    src: portraitImg,
     alt: "Portrait of Odil",
   },
   tagline: "Learning. Building. Becoming.",

@@ -51,10 +51,10 @@ export const contact = {
 
 /**
  * Contact form delivery. The form never pretends to send.
- * Set `endpoint` to a real form service URL (POST, JSON body) once one is configured.
+ * FormSubmit forwards JSON submissions to the email above. The first submission requires email activation.
  */
 export const contactForm = {
-  endpoint: null as string | null,
+  endpoint: "https://formsubmit.co/ajax/odil9797odil@gmail.com" as string | null,
 };
 
 export const navItems = [

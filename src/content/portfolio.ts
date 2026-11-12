@@ -39,11 +39,11 @@ export const profile = {
 
 /** Contact details. Replace `null` with your real values. */
 export const contact = {
-  email: null as string | null, // e.g. "odil@example.com"
+  email: "odil9797odil@gmail.com",
   github: null as string | null, // e.g. "https://github.com/your-username"
   linkedin: null as string | null, // e.g. "https://www.linkedin.com/in/your-profile"
   placeholders: {
-    email: "[ADD YOUR EMAIL]",
+    email: "odil9797odil@gmail.com",
     github: "[ADD YOUR GITHUB URL]",
     linkedin: "[ADD YOUR LINK]",
   },

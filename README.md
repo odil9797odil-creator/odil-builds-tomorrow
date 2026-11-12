@@ -594,8 +594,6 @@ After generating it, review the entire website, fix visual inconsistencies, test
 
 The final result should be something I would proudly use as my personal portfolio for years while growing from a programming student into a professional software developer.
 
-**Live website**: https://odil-builds-tomorrow.lovable.app
-
 ## Development
 
 Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).

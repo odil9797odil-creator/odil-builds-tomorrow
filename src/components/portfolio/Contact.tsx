@@ -58,13 +58,31 @@ export function Contact() {
       const res = await fetch(contactForm.endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(parsed.data),
+        body: JSON.stringify({
+          ...parsed.data,
+          _subject: "New message from your portfolio",
+          _template: "table",
+        }),
       });
       if (!res.ok) throw new Error(`Request failed (${res.status})`);
+
+      const result = (await res.json()) as { success?: boolean | string; message?: string };
+      if (result.success !== true && result.success !== "true") {
+        throw new Error(
+          result.message || "FormSubmit hasn't activated this form yet. Check your inbox for its verification email.",
+        );
+      }
+
       setStatus({ kind: "sent" });
       setValues({ name: "", email: "", message: "" });
-    } catch {
-      setStatus({ kind: "error", message: "Your message couldn't be sent. Please try again later." });
+    } catch (error) {
+      setStatus({
+        kind: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Your message couldn't be submitted. Please try again later.",
+      });
     }
   };
 
@@ -202,7 +220,7 @@ export function Contact() {
                 {status.kind === "sent" && (
                   <div className="flex gap-3 rounded-md bg-secondary px-4 py-3.5 text-sm text-primary">
                     <CheckCircle2 className="mt-0.5 size-4 shrink-0" aria-hidden />
-                    <p>Thank you — your message was sent.</p>
+                    <p>Thank you — the email service accepted your message.</p>
                   </div>
                 )}
                 {status.kind === "error" && (

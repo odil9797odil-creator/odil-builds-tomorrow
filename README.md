@@ -594,17 +594,7 @@ After generating it, review the entire website, fix visual inconsistencies, test
 
 The final result should be something I would proudly use as my personal portfolio for years while growing from a programming student into a professional software developer.
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://odil-builds-tomorrow.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/fbecb8f8-63c3-5856-99c9-b3a972d758ae).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+**Live website**: https://odil-builds-tomorrow.lovable.app
 
 ## Development
 
